@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:onClick="removeAll"
+            android:text="Clear List"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:onClick="takePic1"
+            android:text="Add (0)"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="takePic2"
+            android:text="Reference Pic"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:onClick="compareClick"
+            android:text="Find Match"
+            android:textSize="8sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ToggleButton"
+            android:textOff="Homography Off"
+            android:textOn="Homography On"
+            android:textSize="8sp" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ToggleButton"
+            android:textOff="Images Only"
+            android:textOn="w/ Matches"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/tutorial1_activity_native_surface_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="cameraclick"
+
+            opencv:camera_id="any"
+            opencv:show_fps="true" />
+
+        <ImageView
+            android:id="@+id/refImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+</LinearLayout>
